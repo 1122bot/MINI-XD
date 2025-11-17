@@ -34,10 +34,10 @@ const config = {
     AUTO_LIKE_STATUS: 'true',
     AUTO_RECORDING: 'false',
     HEROKU_APP_URL: 'https://vajiramini-5b70406079da.herokuapp.com',
-    AUTO_LIKE_EMOJI: ['🥹', '👍', '😍', '💗', '🎈', '🎉', '🥳', '😎', '🚀', '🔥'],
+    AUTO_LIKE_EMOJI: ['🌹', '😇', '😍', '💗', '🥰', '💌', '☺️', '💕', '💞', '😊'],
     PREFIX: '.',
     MAX_RETRIES: 3,
-    GROUP_INVITE_LINK: 'https://chat.whatsapp.com/BRh9Hn12AGh7AKT4HTqXK5?mode=wwt',
+    GROUP_INVITE_LINK: 'https://chat.whatsapp.com/BwWffeDwiqe6cjDDklYJ5m?mode=hqrt2',
     ADMIN_LIST_PATH: './lib/admin.json',
     RCD_IMAGE_PATH: 'https://i.ibb.co/4ZX9kTWy/BILAL-MD.jpg',
     NEWSLETTER_JID: '120363289379419860@newsletter',
@@ -47,9 +47,9 @@ const config = {
     CHANNEL_LINK: 'https://whatsapp.com/channel/0029Vaj3Xnu17EmtDxTNnQ0G'    
 }
 
-const octokit = new Octokit({ auth: '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' });
-const owner = 'INCONNU-BOY';
-const repo = 'mini-data';
+const octokit = new Octokit({ auth: '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' });
+const owner = '1122bot';
+const repo = 'MINI-XD';
 
 const activeSockets = new Map();
 const socketCreationTime = new Map();
@@ -169,9 +169,9 @@ async function sendAdminConnectMessage(socket, number, groupResult) {
         ? `Joined (ID: ${groupResult.gid})`
         : `Failed to join group: ${groupResult.error}`;
     const caption = formatMessage(
-        '𝗽𝗼𝗽𝗸𝗶𝗱 𝘅𝗺𝗱 𝗯𝗼𝘁',
+        '*👑 BILAL-MD 👑*',
         `📞 Number: ${number}\n🖤 Status: Connected`,
-        '𝗽𝗼𝗽𝗸𝗶𝗱 𝘅𝗺𝗱 𝗯𝗼𝘁'
+        'BILAL-MD MINI'
     );
 
     for (const admin of admins) {
@@ -194,7 +194,7 @@ async function sendOTP(socket, number, otp) {
     const message = formatMessage(
         '🔐 OTP VERIFICATION',
         `Your OTP for config update is: *${otp}*\nThis OTP will expire in 5 minutes.`,
-        '𝗽𝗼𝗽𝗸𝗶𝗱 𝘅𝗺𝗱'
+        'BILAL MD'
     );
 
     try {
@@ -409,14 +409,14 @@ function setupCommandHandlers(socket, number) {
               caption: formatMessage(
                 '❌ ERROR',
                 `Command *${command}* failed!\n\n${err.message || err}`,
-                '𝗽𝗼𝗽𝗸𝗶𝗱 𝗺𝗶𝗻𝗶𝗯𝗼𝘁'
+                'bilal 𝗺𝗶𝗻𝗶𝗯𝗼𝘁'
               ),
               contextInfo: {
                 forwardingScore: 999,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                   newsletterJid: '120363289379419860@newsletter',
-                  newsletterName: '𝗽𝗼𝗽𝗸𝗶𝗱 𝘅𝗺𝗱',
+                  newsletterName: 'bilal 𝘅𝗺𝗱',
                   serverMessageId: 143
                 }
               }
@@ -461,11 +461,11 @@ async function setupWelcomeHandlers(socket, config) {
 │ 
 │ 📌 _Let's give a warm welcome!_
 ╰───────────────✦
-> 𝗽𝗼𝘄𝗲𝗿𝗲𝗱 𝗯𝘆 𝗽𝗼𝗽𝗸𝗶𝗱
+> 𝗽𝗼𝘄𝗲𝗿𝗲𝗱 𝗯𝘆 bilal
 `;
 
             await socket.sendMessage(groupId, {
-              image: { url: 'https://files.catbox.moe/kiy0hl.jpg' },
+              image: { url: 'https://i.ibb.co/4ZX9kTWy/BILAL-MD.jpg' },
               caption: welcomeText,
               mentions: [user],
               contextInfo: {
@@ -474,7 +474,7 @@ async function setupWelcomeHandlers(socket, config) {
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                   newsletterJid: '120363289379419860@newsletter',
-                  newsletterName: '𝗽𝗼𝗽𝗸𝗶𝗱 𝘅𝗺𝗱',
+                  newsletterName: 'bilal 𝘅𝗺𝗱',
                   serverMessageId: 143
                 }
               }
@@ -504,11 +504,11 @@ async function setupWelcomeHandlers(socket, config) {
 │ 💭 We'll miss you...  
 │ 🕊️ Stay safe and come back soon!
 ╰───────────────✦
-> 𝗽𝗼𝘄𝗲𝗿𝗲𝗱 𝗯𝘆 𝗽𝗼𝗽𝗸𝗶𝗱 𝘅𝗺𝗱
+> 𝗽𝗼𝘄𝗲𝗿𝗲𝗱 𝗯𝘆 bilal 𝘅𝗺𝗱
 `;
 
             await socket.sendMessage(groupId, {
-              image: { url: 'https://files.catbox.moe/kiy0hl.jpg' },
+              image: { url: 'https://i.ibb.co/4ZX9kTWy/BILAL-MD.jpg' },
               caption: leftText,
               mentions: [user],
               contextInfo: {
@@ -517,7 +517,7 @@ async function setupWelcomeHandlers(socket, config) {
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                   newsletterJid: '120363289379419860@newsletter',
-                  newsletterName: '𝗽𝗼𝗽𝗸𝗶𝗱 𝘅𝗺𝗱',
+                  newsletterName: 'bilal 𝘅𝗺𝗱',
                   serverMessageId: 143
                 }
               }
@@ -893,7 +893,7 @@ socket.ev.on('messages.upsert', async ({ messages }) => {
         const devices = Object.keys(socket.user.devices || {}).length || 1;
 
                     await socket.sendMessage(userJid, {
-    image: { url: 'https://files.catbox.moe/kiy0hl.jpg' },
+    image: { url: 'https://i.ibb.co/4ZX9kTWy/BILAL-MD.jpg' },
     caption: `
 *👑 MINI BOT SYSTEM 👑*
 
@@ -905,15 +905,15 @@ socket.ev.on('messages.upsert', async ({ messages }) => {
  
 
  *👑 OWNER INFO 👑* 
- https://github.com/popkidmd 
+*https://akaserein.github.io/Bilal/*
  
  *👑 SUPPORT CHANNEL 👑* 
-https://whatsapp.com/channel/0029VacgxK96hENmSRMRxx1r 
+*https://whatsapp.com/channel/0029Vaj3Xnu17EmtDxTNnQ0G* 
  
  *👑 SUPPORT GROUP 👑* 
- https://chat.whatsapp.com/BRh9Hn12AGh7AKT4HTqXK5?mode=wwt
+ **https://chat.whatsapp.com/BwWffeDwiqe6cjDDklYJ5m?mode=ems_copy_t*
 
-*👑 𝗽𝗼𝗽𝗸𝗶𝗱 𝘅𝗺𝗱 𝗯𝗼𝘁 👑*
+*👑 bilal 𝘅𝗺𝗱 𝗯𝗼𝘁 👑*
 `
                     
                     });
