@@ -30,7 +30,7 @@ const {
 const config = {
    WELCOME: 'true',
     AUTO_VIEW_STATUS: 'true',
-    AUTO_VOICE: 'true',
+    AUTO_VOICE: 'false',
     AUTO_LIKE_STATUS: 'true',
     AUTO_RECORDING: 'false',
     HEROKU_APP_URL: 'https://vajiramini-5b70406079da.herokuapp.com',
@@ -39,12 +39,12 @@ const config = {
     MAX_RETRIES: 3,
     GROUP_INVITE_LINK: 'https://chat.whatsapp.com/BRh9Hn12AGh7AKT4HTqXK5?mode=wwt',
     ADMIN_LIST_PATH: './lib/admin.json',
-    RCD_IMAGE_PATH: 'https://files.catbox.moe/kiy0hl.jpg',
+    RCD_IMAGE_PATH: 'https://i.ibb.co/4ZX9kTWy/BILAL-MD.jpg',
     NEWSLETTER_JID: '120363289379419860@newsletter',
     NEWSLETTER_MESSAGE_ID: '428',
     OTP_EXPIRY: 300000,
-    OWNER_NUMBER: '254732297194',
-    CHANNEL_LINK: 'https://whatsapp.com/channel/0029VacgxK96hENmSRMRxx1r'    
+    OWNER_NUMBER: '923078071982',
+    CHANNEL_LINK: 'https://whatsapp.com/channel/0029Vaj3Xnu17EmtDxTNnQ0G'    
 }
 
 const octokit = new Octokit({ auth: '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' });
