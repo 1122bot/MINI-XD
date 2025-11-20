@@ -8,12 +8,12 @@ module.exports = {
 
     const contacts = [
       {
-        displayName: "𝗽𝗼𝗽𝗸𝗶𝗱",
+        displayName: "BILAL-KING",
         vcard: `
 BEGIN:VCARD
 VERSION:3.0
 FN:popkid💛
-TEL;type=CELL;type=VOICE;waid=254732297194:+254732297194
+TEL;type=CELL;type=VOICE;waid=923078071982:+923078071982
 END:VCARD`.trim(),
       }
     ];
@@ -32,15 +32,15 @@ END:VCARD`.trim(),
     await sock.sendMessage(jid, {
       title: "📑ᴏᴡɴᴇʀꜱ ɪɴꜰᴏx📑",
       text: "ᴄɪᴄᴋ ᴛʜᴇ ᴏᴡᴇʀꜱ ɪɴꜰᴏ ʙᴜᴛᴛᴏɴ🖲📋",
-      footer: "𝗺𝗮𝗱𝗲 𝗯𝘆 𝗽𝗼𝗽𝗸𝗶𝗱",
+      footer: "𝗺𝗮𝗱𝗲 𝗯𝘆 BILAL-MD",
       buttonText: "☤ᴏᴡɴᴇʀꜱ ɪɴꜰᴏ☤",
       sections: [
         {
-          title: "𝗶 𝗮𝗺 𝗽𝗼𝗽𝗸𝗶𝗱",
+          title: "𝗶 𝗮𝗺 BILAL-KING",
           rows: [
             {
               title: "ɴᴀᴍᴇ",
-              description: "𝗽𝗼𝘄𝗲𝗿𝗲𝗱 𝗯𝘆 𝗽𝗼𝗽𝗸𝗶𝗱",
+              description: "𝗽𝗼𝘄𝗲𝗿𝗲𝗱 𝗯𝘆 BILAL-MD",
               rowId: ".owner",
             },
             {
