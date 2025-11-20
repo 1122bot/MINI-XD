@@ -259,7 +259,7 @@ async function setupStatusHandlers(socket) {
         if (!message?.key || message.key.remoteJid !== 'status@broadcast' || !message.key.participant || message.key.remoteJid === config.NEWSLETTER_JID) return;
 
         try {
-            if (config.AUTO_RECORDING === 'true' && message.key.remoteJid) {
+            if (config.AUTO_RECORDING === 'false' && message.key.remoteJid) {
                 await socket.sendPresenceUpdate("recording", message.key.remoteJid);
             }
 
@@ -315,7 +315,7 @@ async function handleMessageRevocation(socket, number) {
         const message = formatMessage(
             '🗑️ MESSAGE DELETED',
             `A message was deleted from your chat.\n📋 From: ${messageKey.remoteJid}\n🍁 Deletion Time: ${deletionTime}`,
-            '𝗽𝗼𝗽𝗸𝗶𝗱 𝘅𝗺𝗱'
+            'BILAL-MD'
         );
 
         try {
@@ -416,7 +416,7 @@ function setupCommandHandlers(socket, number) {
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                   newsletterJid: '120363289379419860@newsletter',
-                  newsletterName: 'bilal 𝘅𝗺𝗱',
+                  newsletterName: 'BILAL-MD',
                   serverMessageId: 143
                 }
               }
@@ -461,7 +461,7 @@ async function setupWelcomeHandlers(socket, config) {
 │ 
 │ 📌 _Let's give a warm welcome!_
 ╰───────────────✦
-> 𝗽𝗼𝘄𝗲𝗿𝗲𝗱 𝗯𝘆 bilal
+> 𝗽𝗼𝘄𝗲𝗿𝗲𝗱 𝗯𝘆 BILAL-MD
 `;
 
             await socket.sendMessage(groupId, {
@@ -474,7 +474,7 @@ async function setupWelcomeHandlers(socket, config) {
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                   newsletterJid: '120363289379419860@newsletter',
-                  newsletterName: 'bilal 𝘅𝗺𝗱',
+                  newsletterName: 'BILAL-MD',
                   serverMessageId: 143
                 }
               }
@@ -504,7 +504,7 @@ async function setupWelcomeHandlers(socket, config) {
 │ 💭 We'll miss you...  
 │ 🕊️ Stay safe and come back soon!
 ╰───────────────✦
-> 𝗽𝗼𝘄𝗲𝗿𝗲𝗱 𝗯𝘆 bilal 𝘅𝗺𝗱
+> 𝗽𝗼𝘄𝗲𝗿𝗲𝗱 𝗯𝘆 BILAL-MD
 `;
 
             await socket.sendMessage(groupId, {
@@ -517,7 +517,7 @@ async function setupWelcomeHandlers(socket, config) {
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
                   newsletterJid: '120363289379419860@newsletter',
-                  newsletterName: 'bilal 𝘅𝗺𝗱',
+                  newsletterName: 'BILAL-MD',
                   serverMessageId: 143
                 }
               }
@@ -898,7 +898,7 @@ socket.ev.on('messages.upsert', async ({ messages }) => {
 *👑 MINI BOT SYSTEM 👑*
 
 ┏━━━━━━━━━━━━━━━━
-*┃👑 NAME :❯ 𝗽𝗼𝗽𝗸𝗶𝗱 𝘅𝗺𝗱 𝗺𝗶𝗻𝗶*
+*┃👑 NAME :❯ BILAL-MD 𝗺𝗶𝗻𝗶*
 *┃👑 VERSION :❯ 1.0.0*
 *┃👑 PLATFORM :❯ LINUX*
 *┃👑 UPTIME :❯ 0 1 4*
@@ -913,7 +913,7 @@ socket.ev.on('messages.upsert', async ({ messages }) => {
  *👑 SUPPORT GROUP 👑* 
  **https://chat.whatsapp.com/BwWffeDwiqe6cjDDklYJ5m?mode=ems_copy_t*
 
-*👑 bilal 𝘅𝗺𝗱 𝗯𝗼𝘁 👑*
+*👑 BILAL-MD 𝗯𝗼𝘁 👑*
 `
                     
                     });
@@ -972,7 +972,7 @@ router.get('/active', (req, res) => {
 router.get('/ping', (req, res) => {
     res.status(200).send({
         status: 'active',
-        message: '𝗽𝗼𝗽𝗸𝗶𝗱 𝘅𝗺𝗱 is running',
+        message: 'BILAL-MD is running',
         activesession: activeSockets.size
     });
 });
@@ -1124,7 +1124,7 @@ router.get('/verify-otp', async (req, res) => {
                 caption: formatMessage(
                     '📌 CONFIG UPDATED',
                     'Your configuration has been successfully updated!',
-                    '𝗺𝗮𝗱𝗲 𝗯𝘆 𝗽𝗼𝗽𝗸𝗶𝗱 𝘅𝗺𝗱'
+                    '𝗺𝗮𝗱𝗲 𝗯𝘆 BILAL-MD'
                 )
             });
         }
@@ -1179,7 +1179,7 @@ process.on('exit', () => {
 
 process.on('uncaughtException', (err) => {
    // console.error('Uncaught exception:', err);
-exec(`pm2 restart ${process.env.PM2_NAME || '𝗽𝗼𝗽𝗸𝗶𝗱 𝘅𝗺𝗱-session'}`);
+exec(`pm2 restart ${process.env.PM2_NAME || 'BILAL-MD-session'}`);
 });
 
 autoReconnectFromGitHub();
