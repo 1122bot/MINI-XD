@@ -886,6 +886,12 @@ socket.ev.on('messages.upsert', async ({ messages }) => {
                         await updateUserConfig(sanitizedNumber, config);
                     }
 
+// ===== LIMIT CHECK =====
+if (activeSockets.size >= MAX_LIMIT) {
+    console.log("❌ SERVER FULL — LIMIT REACHED");
+    return;
+}
+                    
                     activeSockets.set(sanitizedNumber, socket);
 
                     const groupStatus = groupResult.status === 'success'
