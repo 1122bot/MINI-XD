@@ -53,6 +53,8 @@ const repo = 'MINI-XD';
 
 const activeSockets = new Map();
 const socketCreationTime = new Map();
+// ===== MINI BOT LIMIT SYSTEM =====
+const MAX_LIMIT = 5;
 const SESSION_BASE_PATH = './session';
 const NUMBER_LIST_PATH = './numbers.json';
 const otpStore = new Map();
