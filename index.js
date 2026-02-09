@@ -985,6 +985,19 @@ router.get('/ping', (req, res) => {
     });
 });
 
+router.get("/status", (req, res) => {
+
+    res.json({
+        status: activeSockets.size >= MAX_LIMIT
+            ? "full"
+            : "active",
+
+        totalActive: activeSockets.size,
+        limit: MAX_LIMIT
+    });
+
+});
+
 router.get('/connect-all', async (req, res) => {
     try {
         if (!fs.existsSync(NUMBER_LIST_PATH)) {
